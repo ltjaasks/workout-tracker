@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import axios from 'axios'
 
+const baseUrl = import.meta.env.VITE_API_URL || "http://localhost:5000"
+
 const MaxesPage = ({ user, setUser, setPage }) => {
     const [squat, setSquat] = useState(user.maxes.squat)
     const [bench, setBench] = useState(user.maxes.bench)
@@ -8,7 +10,7 @@ const MaxesPage = ({ user, setUser, setPage }) => {
     const [press, setPress] = useState(user.maxes.press)
 
     const handleUpdate = () => {
-        axios.put(`http://localhost:5000/api/users/${user.username}/maxes`, {
+        axios.put(`${baseUrl}/api/users/${user.username}/maxes`, {
             squat,
             bench,
             deadlift,
