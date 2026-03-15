@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import axios from 'axios'
 
+// Deployment backend access
 const baseUrl = import.meta.env.VITE_API_URL || "http://localhost:5000"
 
 const MaxesPage = ({ user, setUser, setPage }) => {

@@ -4,6 +4,9 @@ import WorkoutPage from './WorkoutPage'
 import MaxesPage from './MaxesPage'
 import GraphPage from './GraphPage'
 
+// Deployment backend access
+const baseUrl = import.meta.env.VITE_API_URL || "http://localhost:5000"
+
 
 const App = () => {
   const [username, setUsername] = useState('')
@@ -11,7 +14,7 @@ const App = () => {
   const [page, setPage] = useState('workout')
 
   const handleEnter =() => {
-    axios.get(`http://localhost:5000/api/users/${username}`)
+    axios.get(`${baseUrl}/api/users/${username}`)
       .then(response => {
         console.log(response.data)
         setUser(response.data)
@@ -20,7 +23,7 @@ const App = () => {
         if (error.response.status === 404) {
           console.log('User not found')
 
-          axios.post('http://localhost:5000/api/users', {username})
+          axios.post(`${baseUrl}/api/users`, {username})
           .then(response => {
             setUser(response.data)
           })
