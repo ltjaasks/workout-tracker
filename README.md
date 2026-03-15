@@ -38,3 +38,9 @@ When maxes are updated:
 3. The progress graph updates automatically
 
 Workout weights are calculated dynamically in the frontend based on the stored max values.
+
+## Screenshots
+
+![Workout page](screenshots/workout.png)
+![Update maxes page](screenshots/update.png)
+![Graph page](screenshots/graph.png)
