@@ -5,6 +5,7 @@ will generate workouts for them.
 This application was built to practice full stack web development. I wanted to refresh developing with React, Node.js and MongoDB.
 
 Live demo:
+If the application does not work instantly, the backend is sleeping on render. First request will start the backend and the application will work after 1-2 minutes.
 https://workout-tracker-e4a5.onrender.com/
 
 ## Tech stack:
