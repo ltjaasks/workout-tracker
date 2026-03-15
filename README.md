@@ -41,6 +41,6 @@ Workout weights are calculated dynamically in the frontend based on the stored m
 
 ## Screenshots
 
-![Workout page](screenshots/workout.png)
+![Workout page](screenshots/workouts.png)
 ![Update maxes page](screenshots/update.png)
 ![Graph page](screenshots/graph.png)
